@@ -1,6 +1,8 @@
 function addNewAQField() {
     let newNode = document.createElement("textarea");
-    newNode.classList.add("form-control", "aqField", "mt-2");
+    newNode.classList.add("form-control");
+    newNode.classList.add( "aqField");
+    newNode.classList.add( "mt-2");
     newNode.setAttribute("rows", "2");
     newNode.setAttribute("placeholder", "Enter here");
 
@@ -12,7 +14,9 @@ function addNewAQField() {
 
 function addNewWEField() {
     let newNode = document.createElement("textarea");
-    newNode.classList.add("form-control", "weField", "mt-2");
+    newNode.classList.add( "weField");
+    newNode.classList.add( "mt-2");
+    newNode.classList.add("form-control");
     newNode.setAttribute("rows", "2");
     newNode.setAttribute("placeholder", "Enter here");
 
@@ -87,3 +91,5 @@ function editCV() {
 function printCV() {
     window.print();
 }
+
+
