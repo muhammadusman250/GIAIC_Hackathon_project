@@ -12,6 +12,12 @@
 .background{
     background-color: #07d3d3;
 }
+.msg-alert{
+    color: #fff;
+    background-color: red;
+    padding-left: 15px;
+}
+
 .background01{
     background-color: rgb(213, 221, 228);
     border-radius: 10px;
