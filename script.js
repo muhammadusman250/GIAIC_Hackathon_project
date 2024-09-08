@@ -41,32 +41,34 @@ function generateCV() {
     link3 = document.getElementById("instaT").innerHTML = document.getElementById("instaField").value;
 
     let objective = document.getElementById("objectiveT").innerHTML = document.getElementById("objectiveField").value;
-
-}
-// Work Experience
-let wes = document.getElementsByClassName("weField");
-let str = "";
-for (let e of wes) {
-    if (e.value.trim() !== "") {
-        str += `<li>${e.value}</li>`;
+    if (!namefield, !namefield2, !contact, !address) {
+        alert("Please fill the required field");
+        return;
     }
-}
-document.getElementById("weT").innerHTML = str ;
-
-// Academic Qualifications
-let aqs = document.getElementsByClassName("aqField");
-let str2 = "";
-for (let e of aqs) {
-    if (e.value.trim() !== "") {
-        str2 += `<li>${e.value}</li>`;
+    // Work Experience
+    let wes = document.getElementsByClassName("weField");
+    let str = "";
+    for (let e of wes) {
+        if (e.value.trim() !== "") {
+            str += `<li>${e.value}</li>`;
+        }
     }
+    document.getElementById("weT").innerHTML = str || "<li>No work experience provided.</li>";
+
+    // Academic Qualifications
+    let aqs = document.getElementsByClassName("aqField");
+    let str2 = "";
+    for (let e of aqs) {
+        if (e.value.trim() !== "") {
+            str2 += `<li>${e.value}</li>`;
+        }
+    }
+    document.getElementById("aqT").innerHTML = str2 || "<li>No qualifications provided.</li>";
+
+    // Switch views
+    document.getElementById("cv-form").style.display = "none";
+    document.getElementById("cv-template").style.display = "block";
 }
-document.getElementById("aqT").innerHTML = str2 ;
-
-// Switch views
-document.getElementById("cv-form").style.display = "none";
-document.getElementById("cv-template").style.display = "block";
-
 
 let profilePic = document.getElementById("profile-pic");
 let inputFile = document.getElementById("input-image");
@@ -81,13 +83,7 @@ function editCV() {
     document.getElementById('cv-template').style.display = 'none';
     document.getElementById('cv-form').style.display = 'block';
 }
-}
+
 function printCV() {
     window.print();
 }
-
-
-
-
-
-
